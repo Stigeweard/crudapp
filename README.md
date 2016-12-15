@@ -28,8 +28,8 @@
 │                                         owners_dogs                                             │
 ├────────────────┬─────────────────────────┬──────────────────────────────────────────────────────┤
 │id              │serial                   │primary key                                           │
-│owner_id        │integer                  │not null references books(id) on delete cascade index │
-|dog_id          │integer                  │not null references users(id) on delete cascade index │
+│owner_id        │integer                  │not null references owners(id) on delete cascade index│
+|dog_id          │integer                  │not null references dogs(id) on delete cascade index  │
 │created_at      │timestamp with time zone │not null default now()                                │
 │updated_at      │timestamp with time zone │not null default now()                                │
 └────────────────┴─────────────────────────┴──────────────────────────────────────────────────────┘
