@@ -1,7 +1,9 @@
+'use strict';
+
 exports.seed = (knex) => {
     return knex('owners').del()
         .then(() => {
-            knex('owners').insert([
+            return knex('owners').insert([
                 {
                     name: 'Chuckles',
                     age: 27
@@ -21,7 +23,7 @@ exports.seed = (knex) => {
                 {
                     name: 'Robin',
                     age: 44
-                },
+                }
             ])
         });
 };
